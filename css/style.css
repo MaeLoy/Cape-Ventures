@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Base styles for the whole website*/
+body {
+    font-family: 'Georgia',serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #1B3A4b;
+    background-color: #f5E6C8;
+}
+/*Header banner with site title*/
+header {
+    background-color: #1b3a4b;
+    padding: 20px;
+    text-align: center;
+}
+ header h1{
+    color: #fdf6e9;
+    font-size: 2rem;
+ }
+/*styling for section headings*/
+ h2 {
+    color: #1b3a4b;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+ }
+/* styling for smaller headings*/
+ h3 {
+    color: #e8a33d;
+    font-size: 1.25rem ;
+    margin-top: 15px;
+    margin-bottom: 8px;
+ }
+/*navigation menu bar styling*/
+ nav{
+    background-color: #e8a33d;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px 0;
+ }
+ nav a {
+    color: #1b3a4b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+ }
+ nav a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+ }
+
+ nav a:focus {
+    outline: 2px solid #ffffff;
+ }
+
+ nav a:active {
+    color: #ffffff;
+    font-style: italic;
+ }
+
+
+ /*Adds a shadow under the header*/
+ header {
+    box-shadow: 0 2px 6px rgba (0,0,0,0.3);
+ }
+/*Responsive style for a mobile phone*/
+ @media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+     header h1 {
+        font-size: 24px;
+     }
+     /*this rounds up the images on a mobile phone*/
+     img{border-radius: 8px}
+ }
+
+ /*Responsive style for tablet screen*/
+ @media (max-width: 900px) {
+    nav{
+        gap: 15px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+ }
+
+ /*Keeps main content readable on wider screens*/
+ main {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+ }
+ /*makes all images responsive*/
+ img{
+   max-width: 100%;
+   height: auto;
+   display: block;
+ } 
+
+ /*styles the logo image to be rounded*/
+ header img{
+   border-radius: 50%;
+   margin-bottom: 10px;
+ }
+  
