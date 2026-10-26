@@ -277,3 +277,31 @@ dialog img {
    background-color: var(--gold);
    color: var(--navy)
 }
+
+/* Part 3 Map */
+#map {
+   height: 320px;
+   border-radius: 8px;
+   box-shadow: var(--shadow)
+}
+
+.btn-row {
+   display: flex;
+   gap: 0.5rem;
+   flex-wrap: wrap;
+   margin: 1rem 0;
+}
+.map-btn {
+   background-color: var(--navy);
+   color: var(--cream);
+   border: 2px solid var(--navy);
+   border-radius: 8px;
+   padding: 0.5rem 1rem;
+   font: inherit;
+   cursor: pointer;
+}
+.map-btn:hover,
+.map-btn:focus {
+   background-color: var(--gold);
+   color: var(--navy);
+}

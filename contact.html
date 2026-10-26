@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Cape Ventures</title>
+    <!--Leaflet map library (CSS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
      <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,6 +23,7 @@
                 <a href="enquiry.html">Booking</a>
                 <a href="contact.html">Contact</a>
  </nav>
+
  <!--Main Page content-->
  <main>
     <section>
@@ -38,16 +41,23 @@
       <p>Phone: +27 12 345 6789</p>
     </section>
 
-    <section>
-      <h3>Our Locations</h3>
 
-      <p>Cape Town City Centre</p>
-      <p>V&A Waterfront</p>
-    </section>
+     <!--The interactive map with two locations-->
+ <section>
+  <h2> Our Location</h2>
+  <p>Click a button to zoom to one of our two locations.</p>
+  <div class="btn-row">
+    <button type="button" class="map-btn" data-place="0"> Cape Town City Centre</button>
+    <button type="button" class="map-btn" data-place="1">V&amp;A Waterfront</button>
+  </div>
+  <div id="map" role="region" aria-label="Map showing the Cape Ventures office locations"></div>
+ </section>
  </main>
  <!--Footer information-->
  <footer>
     <p>&copy; 2022 Cape Ventures</p>
  </footer>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+ <script src="js/maps.js" defer></script>
  </body>
  </html>
