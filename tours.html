@@ -26,46 +26,100 @@
     <section>
         <h2>Our Tour Packages</h2>
         <p>
-            Cape Ventures offers a variety of tours designed to help visitors explore the attractions, culture and natueral beauty of Cape Town.
+            Cape Ventures offers a variety of tours designed to help visitors explore the attractions, culture and natural beauty of Cape Town.
         </p>
     </section>
 
-    <section>
+    <div class="grid">
+    <article class="card">
         <h3>Table Mountain Venture</h3>
-        <img src="images/tablemountain.jpg" alt="Table Mountain viewed from below">
+        <img src="images/tablemountain.jpg" 
+        srcset="images/tablemountain-480.jpg 480w, images/tablemountain.jpg 1500w"
+        sizes="(max-width: 600px) 100vw, 50vw"
+        alt="Table Mountain viewed from below">
         <p>
             Explore one of Cape Town's most famous attractions and enjoy spectacular views of the city and surrounding areas.
         </p>
-    </section>
+    </article>
+    
 
-    <section>
+    
+    <article class="card">
         <h3>Cape Point Venture</h3>
-        <img src="images/capepoint.jpg" alt="Scenic coastline at Cape Point">
+        <img src="images/capepoint.jpg"
+         srcset="images/capepoint-480.jpg 480w, images/capepoint.jpg 1500w"
+        sizes="(max-width: 600px) 100vw, 50vw"
+         alt="Scenic coastline at Cape Point">
         <p>
             Discover the scenic landscape and natural beauty of the Cape Point.
         </p>
-    </section>
+    </article>
+    
 
-    <section>
+    
+    <article class="card">
         <h3>Robben Island Venture</h3>
-        <img src="images/robben.jpg" alt="Robben Island historic site">
+        <img src="images/robben.jpg"
+        srcset="images/robben-480.jpg 480w, images/robben.jpg 1500w"
+        sizes="(max-width: 600px) 100vw, 50vw"
+         alt="Robben Island historic site">
         <p>
             Learn about the history of Robben Island and its significance in South African history.
         </p>
-    </section>
+    </article>
+    
 
-    <section>
+    
+    <article class="card">
         <h3> Penguin Venture</h3>
-        <img src="images/bouldersbeach.jpg" alt="African penguins at Boulders Beach">
+        <img src="images/bouldersbeach.jpg" 
+         srcset="images/bouldersbeach-480.jpg 480w, images/bouldersbeach.jpg 1500w"
+        sizes="(max-width: 600px) 100vw, 50vw"
+        alt="African penguins at Boulders Beach">
         <p>
             Visit Boulders Beach and Experience the famous African penguins
         </p>
-    </section>
+    </article>
+    </div>
+     <!-- Gallery: clicking a picture opens it larger in lightbox -->
+      <section>
+        <h2>Photo Gallery</h2>
+        <div class="gallery grid grid-3">
+            <a href="images/gallerytbmtn.jpg"><img src="images/gallerytbmtn-480.jpg"
+            alt="Table Mountain viewed from below" loading="lazy"></a>
+
+          <a href="images/coastline.jpg"><img src="images/coastline-480.jpg"
+            alt="Scenic coastline at Cape Point" loading="lazy"></a>
+
+         <a href="images/islandmuseum.jpg"><img src="images/islandmuseum-480.jpg"
+            alt="Robben Island historic site and Museum" loading="lazy"></a>
+
+        <a href="images/penguins.jpg"><img src="images/penguins-480.jpg"
+            alt="African penguins at bouldersbeach" loading="lazy"></a>
+        </div>
+      </section>
+
+      <!--Lightbox: The pop-up window that shows the larger picture-->
+      <dialog id="lightbox" aria-label="Image viewer">
+        <button type="button" class="close" aria-label="Close image">&times;</button>
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+        <div class="lb-buttons">
+            <button type="button" class="prev">Previous</button>
+            <button type="button" class="next">Next</button>
+        </div>
+      </dialog>
+
+
+
  </main>
 
  <!--Footer Information-->
  <footer>
     <p>&copy; 2022 Cape Ventures</p>
  </footer>
+ <script src="js/main.js" defer></script>
  </body>
  </html>

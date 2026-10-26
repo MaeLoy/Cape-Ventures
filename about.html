@@ -31,27 +31,58 @@
               </p>
       </section>
 
-      <section>
+      <div class="grid grid-3">
+      <article class="card">
         <h2>Our Mission</h2>
-
         <p>
             Our mission is to provide visitors with enjoyable and memorable Cape Town experiences through carefully planned tours and friendly service.
         </p>
-      </section>
+      </article>
 
-      <section>
+      <article class="card">
         <h2>Our Vision</h2>
 
         <p>
             Our vision is to become a trusted tourism company that connects visitors with the beauty, history and culture of Cape Town.
         </p>
-      </section>
-      <section>
+      </article>
+
+      <article class="card">
         <h2>Why Cape Town</h2>
         <P>
           Cape Town is one of the most visited cities in Africa, known for its natural beauty, rich history, vibrant culture. Cape Ventures was founded to help travelers experience all of this safely and affordably.
         </P>
-      </section>
+      </article>
+      </div>
+
+      <!-- FAQ will be opened and closed by java script-->
+       <section>
+        <h2> Frequently Asked Questions</h2>
+
+        <div class="acc-item">
+          <h3><button type="button" class="acc-btn" aria-expanded="false"
+            aria-controls="faq1">What should l bring on a tour?</button></h3>
+            <div class="acc-panel" id="faq1" hidden>
+              <p>Bring comfortable shoes, sunscreen, some water and a light jacket, because CapeTown weather can change quickly.</p>
+            </div>
+        </div>
+
+        <div class="acc-item">
+          <h3><button type="button" class="acc-btn" aria-expanded="false"
+          aria-controls="faq2">Are the tours suitable for children?</button> </h3>
+          <div class="acc-panel" id="faq2" hidden>
+            <p> Yes, all of our tours are family friendly. Please tell us the ages of children when you book</p>
+          </div>
+        </div>
+
+              <div class="acc-item">
+          <h3><button type="button" class="acc-btn" aria-expanded="false"
+          aria-controls="faq3">Do you offer any treats or beverages on the tour?</button> </h3>
+          <div class="acc-panel" id="faq3" hidden>
+            <p> Yes, we do offer a refreshing bottle of water in summer or a cup of coffee in winter. ON THE HOUSE!!!!!!</p>
+          </div>
+        </div>
+       </section>
 
  </main>
 
@@ -60,4 +91,5 @@
     <p>&copy; 2022 Cape Ventures</p>
  </footer>
  </body>
+ <script src="js/main.js" defer></script>
  </html>

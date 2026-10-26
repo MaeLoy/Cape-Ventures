@@ -25,36 +25,51 @@
 
         <main>
             <!--The images are displayed by each section starting with "<img src"-->
-            <section> <!--Main Content-->
+            <section class="hero"> <!--Main Content-->
+                <div class="hero-text">
                 <h2> Explore The City of Cape Town with Cape Ventures</h2>
- <img src="images/cape-town.jpg" alt="View of Table Mountain, Cape Town">
                 <p>
                     Established in 2022, Cape Ventures is a tourism company created to help visitors discover the beauty, history and culture of Cape Town.
                 </p>
-
                 <p>
                     From the iconic Table Mountain to the scenic Cape Point and the famous penguins at Boulders Beach, Cape Ventures provides exciting experience for visitors exploring Cape Town.
                 </p>
+                </div>
+                <img src="images/cape-town.jpg" 
+                srcset="images/cape-town-480.jpg 480w , images/cape-town.jpg 1280w"
+                sizes="(max-width: 600px) 100vw, 50vw"
+                alt="View of Table Mountain, Cape Town">
             </section>
+
 
             <section>
                 <h2> Our Featured Tours</h2>
+                <div class="grid">
+                    <article class="card">         
                 <h3> Table Mountain Venture</h3>
                 <p>
                     Experience the breathtaking views of Cape Town from Table Mountain.
                 </p>
-         
+            </article>
+           </div>
+
+           <article class="card">
                 <h3>Cape Point Venture</h3>
                 <p>Explore the scenic beauty of Cape Point and its surrounding coastline.</p>
+            </article>
 
+            <article class="card">
                 <h3>Robben Island Venture</h3>
                 <p>Discover the history and heritage of Robben Island.</p>
-                  
+                 </article>
+                 
+                 <article class="card">
                 <h3>Penguin Venture</h3>
                 <p>
                     Visit Boulders Beach and see the famous African penguins.
                 </p>
-
+            </article>
+            
                 </section>
         </main>
 

@@ -3,71 +3,92 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Variables: colours, shadow and spacing stored once and reused */
+:root {
+   --navy: #1b3a4b;
+   --gold: #e8a33d;
+   --sand: #f5e6c8;
+   --cream: #fdf6e9;
+   --white: #ffffff;
+   --shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
 /*Base styles for the whole website*/
 body {
     font-family: 'Georgia',serif;
     font-size: 1rem;
     line-height: 1.5;
-    color: #1B3A4b;
-    background-color: #f5E6C8;
+    color: var(--navy);
+    background-color: var(--sand);
 }
 /*Header banner with site title*/
 header {
-    background-color: #1b3a4b;
+    background-color: var(--navy);
     padding: 20px;
     text-align: center;
 }
  header h1{
-    color: #fdf6e9;
+    color: var(--cream);
     font-size: 2rem;
  }
 /*styling for section headings*/
  h2 {
-    color: #1b3a4b;
+    color: var(--navy);
     font-size: 1.5rem;
     margin-top: 20px;
     margin-bottom: 10px;
  }
 /* styling for smaller headings*/
  h3 {
-    color: #e8a33d;
+    color: var(--gold);
     font-size: 1.25rem ;
     margin-top: 15px;
     margin-bottom: 8px;
  }
 /*navigation menu bar styling*/
  nav{
-    background-color: #e8a33d;
+    background-color: var(--gold);
     display: flex;
     justify-content: center;
     gap: 30px;
     padding: 12px 0;
  }
  nav a {
-    color: #1b3a4b;
+    color: var(--navy);
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
  }
  nav a:hover{
-    color: #ffffff;
+    color: var(--white);
     text-decoration: underline;
  }
 
  nav a:focus {
-    outline: 2px solid #ffffff;
+    outline: 2px solid var(--white);
  }
 
  nav a:active {
-    color: #ffffff;
+    color: var(--white);
     font-style: italic;
  }
 
 
  /*Adds a shadow under the header*/
  header {
-    box-shadow: 0 2px 6px rgba (0,0,0,0.3);
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 1;
  }
+  /*Responsive style for tablet screen*/
+ @media (max-width: 900px) {
+    nav{
+        gap: 15px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+ }
+
 /*Responsive style for a mobile phone*/
  @media (max-width: 600px) {
     nav {
@@ -82,15 +103,6 @@ header {
      img{border-radius: 8px}
  }
 
- /*Responsive style for tablet screen*/
- @media (max-width: 900px) {
-    nav{
-        gap: 15px;
-    }
-    header h1 {
-        font-size: 28px;
-    }
- }
 
  /*Keeps main content readable on wider screens*/
  main {
@@ -110,4 +122,158 @@ header {
    border-radius: 50%;
    margin-bottom: 10px;
  }
-  
+ /* Part 2 feedback fixes */
+ /* Flexbox layout for the home page hero */
+ 
+ .hero {
+   display: flex;
+   gap: 1.5rem;
+   align-items: center;
+   margin-top: 1.5rem;
+ }
+
+ .hero > * {
+   flex: 1;
+ }
+
+ /* Grid layout for the cards */
+.grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1.5rem;
+   margin-top: 1rem;
+}
+
+.grid-3 {
+   grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+   background-color: var(--cream);
+   border-radius: 8px;
+   padding: 1rem;
+   box-shadow: var(--shadow);
+}
+
+.card img {
+   width: 100%;
+   border-radius: 8px;
+   margin-bottom: 0.5rem;
+}
+
+/* Responsive: tablet */
+@media (max-width: 900px) {
+   h2 {font-size: 1.35rem; }
+   h3 {font-size: 1.15rem; }
+   body {font-size: 0.975rem; }
+   .hero { flex-direction: column; }
+   .grid-3 { grid-template-columns: repeat(2, 1fr); } 
+}
+
+/* Responsive: mobile phone */
+@media (max-width: 600px) {
+   h2 { font-size: 1.25rem; }
+   h3 {font-size: 1.1rem; }
+   body { font-size: 0.95rem; }
+   .grid, .grid-3 {grid-template-columns: 1fr; }
+}
+/* Part 3 Accordion */
+.acc-item {
+   border-bottom: 1px solid var(--navy);
+}
+.acc-btn{
+width : 100%;
+text-align: left;
+background: none;
+border: none;
+font: inherit;
+font-weight: bold;
+color: var(--navy);
+padding: 0.75rem 0;
+cursor: pointer;
+} 
+
+.acc-btn::after {
+content: "+" ;
+float: right;
+}
+
+.acc-btn[aria-expanded="true"]::after {
+   content: "\2212" ;
+}
+
+.acc-btn:hover,
+.acc-btn:focus {
+   color: var(--gold);
+}
+
+/* gallery and lightbox */
+
+.gallery a {
+   display: block;
+   overflow: hidden;
+   border-radius: 8px;
+   box-shadow: var(--shadow)
+}
+
+.gallery img {
+   width: 100%;
+   transition: transform 0.4s;
+}
+
+.gallery a:hover img,
+.gallery a:focus img {
+   transform: scale(1.08);
+}
+
+dialog {
+   border: none;
+   border-radius: 8px;
+   padding: 1.5rem;
+   width: min(92vw, 600px);
+   margin: auto;
+   background-color: var(--cream);
+   color: var(--navy);
+}
+
+dialog::backdrop {
+   background: rgba(0, 0, 0, 0.65);
+}
+dialog img {
+   margin: 0 auto;
+   max-height: 60vh;
+   border-radius: 8px;
+}
+
+.close {
+   position: absolute;
+   top: 0.25rem;
+   right: 0.75rem;
+   background: none;
+   border: none;
+   font-size: 2rem;
+   color: var(--navy);
+   cursor: pointer;
+}
+
+.lb-buttons {
+   display: flex;
+   gap: 0.5rem;
+   margin-top: 0.75rem;
+}
+
+.lb-buttons button {
+   background-color: var(--navy);
+   color: var(--cream);
+   border: 2px solid var(--navy);
+   border-radius: 8px;
+   padding: 0.5rem 1rem;
+   font: inherit;
+   cursor: pointer;
+}
+
+.lb-buttons button:hover,
+.lb-buttons button:focus {
+   background-color: var(--gold);
+   color: var(--navy)
+}
