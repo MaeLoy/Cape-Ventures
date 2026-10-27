@@ -344,3 +344,39 @@ The .js class is added by main.js so that the cards stay visible if JavaScript i
 @media (prefers-reduced-motion: reduce) {
    * {animation: none !important; transition: none !important;}
 }
+
+/* Search and sort controls */
+.controls {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   gap: 1.5rem;
+   margin: 1rem 0;
+}
+.controls label {
+   display: block;
+   font-weight: bold;
+   margin-bottom: 0.25rem;
+}
+.controls input,
+.controls select {
+   width: 100%;
+   padding: 0.5rem;
+   font: inherit;
+   border: 2px solid var(--navy);
+   border-radius: 8px;
+   background-color: var(--white);
+   color: var(--navy);
+}
+
+.controls input:focus,
+.controls select:focus {
+   outline: 3px solid var(--gold);
+}
+a.map-btn {
+   display: inline-block;
+   text-decoration: none;
+}
+@media (max-width: 600px) {
+   .controls {grid-template-columns: 1fr;}
+}
+

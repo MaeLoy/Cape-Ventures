@@ -29,58 +29,27 @@
             Cape Ventures offers a variety of tours designed to help visitors explore the attractions, culture and natural beauty of Cape Town.
         </p>
     </section>
-
-    <div class="grid">
-    <article class="card reveal">
-        <h3>Table Mountain Venture</h3>
-        <img src="images/tablemountain.jpg" 
-        srcset="images/tablemountain-480.jpg 480w, images/tablemountain.jpg 1500w"
-        sizes="(max-width: 600px) 100vw, 50vw"
-        alt="Table Mountain viewed from below">
-        <p>
-            Explore one of Cape Town's most famous attractions and enjoy spectacular views of the city and surrounding areas.
-        </p>
-    </article>
-    
-
-    
-    <article class="card reveal">
-        <h3>Cape Point Venture</h3>
-        <img src="images/capepoint.jpg"
-         srcset="images/capepoint-480.jpg 480w, images/capepoint.jpg 1500w"
-        sizes="(max-width: 600px) 100vw, 50vw"
-         alt="Scenic coastline at Cape Point">
-        <p>
-            Discover the scenic landscape and natural beauty of the Cape Point.
-        </p>
-    </article>
-    
-
-    
-    <article class="card reveal">
-        <h3>Robben Island Venture</h3>
-        <img src="images/robben.jpg"
-        srcset="images/robben-480.jpg 480w, images/robben.jpg 1500w"
-        sizes="(max-width: 600px) 100vw, 50vw"
-         alt="Robben Island historic site">
-        <p>
-            Learn about the history of Robben Island and its significance in South African history.
-        </p>
-    </article>
-    
-
-    
-    <article class="card reveal">
-        <h3> Penguin Venture</h3>
-        <img src="images/bouldersbeach.jpg" 
-         srcset="images/bouldersbeach-480.jpg 480w, images/bouldersbeach.jpg 1500w"
-        sizes="(max-width: 600px) 100vw, 50vw"
-        alt="African penguins at Boulders Beach">
-        <p>
-            Visit Boulders Beach and Experience the famous African penguins
-        </p>
-    </article>
+<!-- Search and sort controls that will be used by tours.js -->
+ <section>
+    <div class="controls">
+        <div>
+            <label for="tour-search">Search tours</label>
+            <input type="search" id="tour-search" placeholder="e.g. island, penguins">
+        </div>
+    <div>
+    <label for="tour-sort">Sort by</label>
+    <select id="tour-sort">
+        <option value="name">Name (A to Z)</option>
+        <option value="price-asc">Price (low to high)</option>
+        <option value="price-desc">Price (high to low)</option>
+    </select>
     </div>
+    </div>
+    <p id="tour-count" aria-live="polite"></p>
+    <!--The tour cards are created here by java script-->
+    <div class="grid" id="tour-grid"></div>
+ </section>
+   
      <!-- Gallery: clicking a picture opens it larger in lightbox -->
       <section>
         <h2>Photo Gallery</h2>
@@ -121,5 +90,6 @@
     <p>&copy; 2022 Cape Ventures</p>
  </footer>
  <script src="js/main.js" defer></script>
+ <script src="js/tours.js" defer></script>
  </body>
  </html>
