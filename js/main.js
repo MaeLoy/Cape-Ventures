@@ -41,3 +41,17 @@ lb.querySelector('.next').addEventListener('click', function (){show(current+1);
 lb.querySelector('.close').addEventListener('click', function (){ lb.close(); });
 
 }
+document.documentElement.classList.add('js'); /* communicates with CSS that JavaScript is working */
+
+var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry){
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); /* Stop watching once it appears */
+        }
+    });
+}, {threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(function (el){
+    observer.observe(el);
+});
