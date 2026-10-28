@@ -9,7 +9,15 @@
     <meta name="keywords" content="Cape Town tours, Table Mountain tour, Cape Point tour,
     Robben Island tour, Boulders Beach penguins, Cape Ventures">
     <meta name="author" content="Megan Arigundia">
+        <!--Security-Limits the information my site shares with other sites-->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Local SEO: tells search engine who we are and where we are-->
+     <script type="application/ld+json">
+       { "@context": "https://schema.org","@type":"TravelAgency","name":"Cape Ventures","url":
+        "https://maeloy.github.io/Cape-Ventures/","email":"info@capeventures.co.za","telephone":"+27123456789","foundingDate":
+        "2022","address":{"@type":"PostalAddress","addressLocality":"CapeTown","addressCountry":"ZA"}}
+     </script>
     </head>
 
     <body>
@@ -39,6 +47,8 @@
                 <p>
                     From the iconic Table Mountain to the scenic Cape Point and the famous penguins at Boulders Beach, Cape Ventures provides exciting experience for visitors exploring Cape Town.
                 </p>
+                <a class="map-btn" href="tours.html">View our tours</a>
+                <a class="map-btn" href="enquiry.html">Book now</a>
                 </div>
                 <img src="images/cape-town-table-mountain-view.jpg" 
                 srcset="images/cape-town-table-mountain-view-480.jpg 480w , images/cape-town-table-mountain-view.jpg 1280w"
@@ -80,7 +90,9 @@
 
 <!--Footer Information-->
  <footer>
-    <p>&copy; 2022 Cape Ventures</p>
+    <p>&copy; 2022 Cape Ventures | Cape Town, South Africa</p>
+    <p><a href="tours.html">Cape Town tours</a> | <a
+    href="enquiry.html">Book a tour</a> | <a href="contact.html">Contact us</a></p>
  </footer>
  <script src="js/main.js" defer></script>
  </body>

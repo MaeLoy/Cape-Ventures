@@ -43,6 +43,7 @@ function makeCard(t) {
     pic.srcset = 'images/' + t.img + '-480.jpg 480w, images/' + t.img + '.jpg ' + t.w + 'w';
     pic.sizes = '(max-width: 600px) 100vw, 50vw';
     pic.alt = t.alt;
+    pic.loading = 'lazy'; /*Speed*/
 
     var desc = document.createElement('p');
     desc.textContent = t.desc;
