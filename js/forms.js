@@ -153,3 +153,57 @@ if (enquiryForm) {
         box.hidden = false;
     });
 }
+/* Contact form (Contact.html) */
+var EMAIL_TO = 'info@capeventures.co.za'; /* the email that the message will be sent to*/
+var contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    /*Validation rules for the for*/
+    var contactRules = {
+        fullname: RULES.fullname,
+        email: RULES.email,
+        phone: function (v) {return v.trim() === '' || RULES.phone(v); }, /*optional but must be valid if filled in */
+        type: function (v) { return v !== '' || 'Please choose the type of message.'; },
+        message: function (v) {
+            var len = v.trim().length;
+            return (len >= 10 && len <= 500) || 'Your message must be between 10 and 500 characters.';
+        }
+    };
+    liveCheck(contactForm, contactRules);
+
+    /* When the form is submitted: validate then build the email */
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!checkRules(contactForm, contactRules)) { return; }
+
+            var f = contactForm.elements;
+            var subject = '[' + f.type.value + '] Message from ' + f.fullname.value.trim();
+            var body = 'Name: ' + f.fullname.value.trim() + '\n' +
+            'Email: ' + f.email.value.trim() + '\n' +
+            'Phone: ' + (f.phone.value.trim() || 'not given') + '\n' +
+
+            'Type: ' + f.type.value + '\n\n' +
+            'Message:\n' + f.message.value.trim();
+            
+            /* A mailito link opens the visitor's email app with everything filled in */
+
+            var url = 'mailito:' + EMAIL_TO + '?subject=' +
+            encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+            var box = document.getElementById('contact-response');
+            box.replaceChildren();
+
+            var note = document.createElement('p');
+            note.textContent = 'Your email is ready. If your email app did not open, press the button below to send it to ' + EMAIL_TO + '.';
+            box.appendChild(note);
+
+            var link = document.createElement('a');
+            link.className = 'map-btn';
+            link.href = url;
+            link.textContent = 'Open my email';
+            box.appendChild(link);
+
+            box.hidden = false;
+            window.location.href = url;
+    });
+}

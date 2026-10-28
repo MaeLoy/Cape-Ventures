@@ -19,7 +19,7 @@ var markers = places.map(function (p) {
 });
 
 /* The buttons zoom the map to the chosen place and open its pop-up */
-document.querySelectorAll('.map-btn').forEach(function (btn) {
+document.querySelectorAll('[data-place]').forEach(function (btn) {
     btn.addEventListener('click', function (){
     var i = Number(btn.dataset.place);
     map.flyTo([places[i].lat, places[i].lng], 16);

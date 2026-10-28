@@ -33,12 +33,58 @@
          Have a question about our tours? Get in touch with Cape Ventures for more information.
       </p>
     </section>
-
+<!-- Contact information section-->
     <section>
       <h3>Contact Information</h3>
 
       <p>Email: info@capeventures.co.za</p>
       <p>Phone: +27 12 345 6789</p>
+    </section>
+    <!--Contact form: checked by forms.js, then turned into an email-->
+    <section>
+      <h2>Send Us a Message</h2>
+      <p>Fields marked * are required.</p>
+
+      <form id="contact-form" novalidate>
+        <fieldset>
+          <legend>Your message</legend>
+          <div class="field">
+            <label for="fullname">Full name*</label>
+            <input type="text" id="fullname" name="fullname" autocomplete="name" maxlength="60">
+            <span class="error" id="fullname-error"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <span class="error" id="email-error"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="082 123 4567">
+            <span class="error" id="phone-error"></span>
+          </div>
+          <div class="field">
+            <label for="type">Type of message *</label>
+            <select id="type" name="type">
+              <option value="">-- Select --</option>
+              <option>General question</option>
+              <option>Group booking</option>
+              <option>Feedback</option>
+              <option>Other</option>
+            </select>
+            <span class="error" id="type-error"></span>
+          </div>
+          <div class="field">
+            <label for="message">Your message * (10 to 500 characters)</label>
+            <textarea id="message" name="message" rows="5" maxlength="500"></textarea>
+            <span class="error" id="message-error"></span>
+          </div>
+        </fieldset>
+        <button type="submit" class="map-btn">Create email</button>
+      </form>
+
+      <!-- The "email is ready" message is written here by forms.js-->
+       <div id="contact-response" class="response" aria-live="polite" hidden></div>
     </section>
 
 
@@ -59,5 +105,6 @@
  </footer>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
  <script src="js/maps.js" defer></script>
+ <script src="js/forms.js" defer></script>
  </body>
  </html>
