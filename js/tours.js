@@ -3,20 +3,20 @@
 /*The tour data (price is in rands per person; w represents the width of the big picture) */
 
 var TOURS = [
-    { id: 'table-mountain', name: 'Table Mountain Venture', price: 450, hours: 4, img: 'tablemountain', w: 534,
+    { id: 'table-mountain', name: 'Table Mountain Venture', price: 450, hours: 4, img: 'table-mountain-views', w: 534,
         alt: 'Table Mountain viewed from below',
         desc: "Explore one of Cape Town's most famous attractions and enjoy spectacular views of the city and surrounding areas."
     },
-    { id: 'cape-point' , name: 'Cape Point Venture' , price: 750, hours: 8, img: 'capepoint' , w: 1500,
+    { id: 'cape-point' , name: 'Cape Point Venture' , price: 750, hours: 8, img: 'cape-point-coastline-tour' , w: 1500,
         alt: 'Scenic coastline at Cape Point',
         desc: 'Discover the scenic landscape and natural beauty of Cape Point.'
     },
-    { id: 'robben-island' , name: 'Robben Island Venture' , price: 650, hours: 5, img: 'robben' , w: 1123,
+    { id: 'robben-island' , name: 'Robben Island Venture' , price: 650, hours: 5, img: 'robben-island-historic-site-tour' , w: 1123,
         closed: [1], /*days the the tour does not run (0=Sunday, 1= Monday etc)*/
         alt: 'Robben Island historic site',
         desc: 'Learn about the history of Robben Island and its significance in South African history.'
     },
-    { id: 'penguin' , name: 'Penguin Venture' , price: 550, hours: 3, img: 'bouldersbeach' , w: 1900,
+    { id: 'penguin' , name: 'Penguin Venture' , price: 550, hours: 3, img: 'boulders-beach-african-penguins' , w: 1900,
         alt: 'African penguins at Boulders Beach',
         desc: 'Visit Boulders Beach and experience the famous African penguins.'
     } 
