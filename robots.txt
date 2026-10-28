@@ -1,0 +1,4 @@
+# Allow all search engines to look at the whole site 
+User-agent: *
+Allow: /
+Sitemap: https://maeloy.github.io/Cape-Ventures/Sitemap.xml
