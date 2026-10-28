@@ -12,6 +12,7 @@ var TOURS = [
         desc: 'Discover the scenic landscape and natural beauty of Cape Point.'
     },
     { id: 'robben-island' , name: 'Robben Island Venture' , price: 650, hours: 5, img: 'robben' , w: 1123,
+        closed: [1], /*days the the tour does not run (0=Sunday, 1= Monday etc)*/
         alt: 'Robben Island historic site',
         desc: 'Learn about the history of Robben Island and its significance in South African history.'
     },
@@ -39,7 +40,7 @@ function makeCard(t) {
 
     var pic = document.createElement('img');
     pic.src = 'images/' + t.img + '.jpg';
-    pic.srcset = 'images/' + t.img + '-480.jpg 480w, images/' + t.img + '.jpg' + t.w + 'w';
+    pic.srcset = 'images/' + t.img + '-480.jpg 480w, images/' + t.img + '.jpg ' + t.w + 'w';
     pic.sizes = '(max-width: 600px) 100vw, 50vw';
     pic.alt = t.alt;
 
@@ -48,7 +49,7 @@ function makeCard(t) {
 
     var info = document.createElement('p');
     info.className = 'meta';
-    info.textContent = 'R' + t.price + ' per person | ' + t.hours + 'hours';
+    info.textContent = 'R' + t.price + ' per person | ' + t.hours + ' hours';
 
     var book = document.createElement('a');
     book.className = 'map-btn';
@@ -75,9 +76,9 @@ function render() {
     list.forEach(function (t) { grid.appendChild(makeCard(t)); });
 
     if (list.length === 0) {
-        count.textContent = 'No tours match ypur search. Try another word, for example "island".';
+        count.textContent = 'No tours match your search. Try another word, for example "island".';
     }else {
-        count.textContent = 'Showing ' + list.length + ' of' + TOURS.length + ' tours';
+        count.textContent = 'Showing ' + list.length + ' of ' + TOURS.length + ' tours';
     }
 }
 

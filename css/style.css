@@ -379,4 +379,72 @@ a.map-btn {
 @media (max-width: 600px) {
    .controls {grid-template-columns: 1fr;}
 }
+/* forms */
+
+fieldset {
+   border: 2px solid var(--navy);
+   border-radius: 8px;
+   padding: 1rem;
+   margin-bottom: 1rem;
+   background-color: var(--cream);
+}
+legend {
+   font-weight: bold;
+   padding: 0 0.5rem;
+}
+.field {
+   margin-bottom: 0..75rem;
+}
+form label,
+.label{
+   display:block;
+   font-weight: bold;
+   margin-bottom: 0.25rem;
+}
+form label.inline {
+   font-weight: normal;
+}
+form input,
+form select,
+form textarea {
+width: 100%;
+padding: 0.5rem;
+font: inherit;
+border: 2px solid var(--navy);
+border-radius: 8px;
+background-color: var(--white);
+color: var(--navy);
+}
+form input[type="radio"],
+form input[type="checkbox"] {
+   width: auto;
+   margin-right: 0.5rem;
+}
+form input:focus,
+form select:focus,
+form textarea:focus {
+   outline: 3px solid var(--gold);
+}
+.invalid {
+   border-color: #b00020;
+   background-color: #fff0f0;
+}
+.error {
+   display: block;
+   color: #b00020;
+   font-size: 0.875rem;
+   min-height: 1.2em;
+}
+.response {
+   background-color: var(--cream);
+   border-left: 6px solid var(--gold);
+   border-radius: 8px;
+   padding: 1rem;
+   margin-top: 1rem;
+   box-shadow: var(--shadow);
+}
+.response ul {
+   margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
 

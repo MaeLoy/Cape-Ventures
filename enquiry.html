@@ -26,7 +26,7 @@
     <section>
       <h2>Book a Cape Ventures Tour</h2>
       <p>
-         Chose one of our Cape Town tour experiences and submit your booking request below.
+         ChoOse one of our Cape Town tour experiences and submit your booking request below.
       </p>
     </section>
     
@@ -40,10 +40,83 @@
          <li>Penguin Venture</li>
       </ul>
     </section>
+    <!-- Enquiry form: checked by forms.js before it gives a quote -->
+     <section>
+      <h2>Get Your Quote</h2>
+      <p>Choose a tour and send your enquiry. We will show you the price and availability straight away. Fields marked * are required.</p>
+
+      <form id="enquiry-form" novalidate>
+     <fieldset>
+         <legend>Your details</legend>
+         <div class="field">
+            <label for="fullname">FULL name *</label>
+            <input type="text" id="fullname" name="fullname" 
+            autocomplete="name" maxLength="60">
+            <span class="error" id="fullname-error"></span>
+         </div>
+         <div class="field">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <span class="error" id="email-error"></span>
+         </div>
+         <div class="field">
+            <label for="phone">Phone number *</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel"
+            placeholder="082 123 4567">
+            <span class="error" id="phone-error"></span>
+         </div>
+      </fieldset>
+
+      <fieldset>
+         <legend>Tour details</legend>
+         <div class="field">
+            <label for="tour">Choose a tour *</label>
+            <select id="tour" name="tour">
+               <option value="">-- Select a tour --</option>
+            </select>
+            <span class="error" id="tour-error"></span>
+         </div>
+         <div class="field">
+            <label for="date">Travel date *</label>
+            <input type="date" id="date" name="date">
+            <span class="error" id="date-error"></span>
+         </div>
+         <div class="field">
+            <label for="travellers">Number of travellers (1 to 20) *</label>
+            <input type="number" id="travellers" name="travellers" min="1" max="20" value="1">
+            <small>Groups of 6 or more get 10% off</small>
+            <span class="error" id="travellers-error"></span>
+         </div>
+
+         <p class="label">Pick-up</p>
+         <label class="inline"><input type="radio" name="pickup" value="office" checked>
+         Meet at the V&amp;A Waterfront (free) </label>
+         <label class="inline"><input type="radio" name="pickup" value="hotel">
+          Hotel pick-up (R100 per booking)</label>
+
+          <p class="label">Extras</p>
+          <label class="inline"><input type="checkbox" name="lunch"> Lunch pack (R90 per person)</label>
+          <label class="inline"><input type="checkbox" name="photos"> Photo package (R250 per booking)</label>
+
+          <div class="field">
+            <label for="notes">Special requests (optional)</label>
+            <textarea id="notes" name="notes" rows="3" maxlength="300"></textarea>
+            <span class="error" id="notes-error"></span>
+          </div>
+      </fieldset>
+
+      <button type="submit" class="map-btn">Get my quote</button>
+      </form>
+
+      <!--The quotew is written here by forms.js-->
+      <div id="enquiry-response" class="response" aria-live="polite" hidden></div>
+     </section>
  </main>
  <!--Footer Information-->
  <footer>
     <p>&copy; 2022 Cape Ventures</p>
  </footer>
+ <script src="js/tours.js" defer></script>
+ <script src="js/forms.js" defer></script>
  </body>
  </html>
