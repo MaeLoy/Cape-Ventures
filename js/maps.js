@@ -8,7 +8,7 @@ var places = [
 var map = L.map('map').setView([-33.914, 18.422], 13);
 
 /*Will add the map pictures from the OpenStreetMap */
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
     maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
