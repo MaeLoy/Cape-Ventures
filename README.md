@@ -17,13 +17,13 @@ Cape Ventures is a fictional tourism company that I created based in Cape Town, 
 ## Key Features and Functionality
 - Five linked pages: Home, Tours, About, Enquiry and Contact
 - Custom Cape Ventures logo and a consistent navigation menu on every page
-Flexbox hero section and CSS Grid Layouts for the tour, about and gallery cards
+- Flexbox hero section and CSS Grid Layouts for the tour, about and gallery cards
 - Responsive design with tablet (900px) and mobile (600px) breakpoints that resize navigation, headings, text, grids and images
 - Responsive images using srcset, with smaller 480px versions for small screens
-- Interective elements: FAQ accordion, gallery lightbox, hover effects and scroll animations
+- Interactive elements: FAQ accordion, gallery lightbox, hover effects and scroll animations
 - Dynamic tour cards built with JavaScript, with search and sort controls
 - Interactive Leaflet map on the Contact page showing two Cape Town locations
-- Enquiry form with validation, a itemised price quote, a 10% group discount for 6 or more travellers, and an availability check for Monday closures
+- Enquiry form with validation, an itemised price quote, a 10% group discount for 6 or more travellers, and an availability check for Monday closures
 - Contact form with validation that opens a pre-filled email to Cape Ventures
 
 ## Timeline and Milestones
@@ -43,14 +43,9 @@ Flexbox hero section and CSS Grid Layouts for the tour, about and gallery cards
  Home Page (index.html)
 
  |
- About Us(about.html)| Tour Packages(tours.html)| Bookings(bookings.html)| Contact(contact.html)
+ About Us(about.html)| Tour Packages(tours.html)| Enquiry(enquiry.html)| Contact(contact.html)
 
  Table Mountain Venture| Cape Point Venture| Robben Island Venture| Penguin Venture
-
- ## Timeline and Milestones
- - Part 1: Project planning, HTML structure - completed
- - Part 2: CSS styling, responsive design- completed
- - Part 3: JavaScript functionality, SEO - in progress
 
  ## Part 1 Details
  This part involved researching on more information about the Cape Town tourism world, planning what I wanted the site structure to be like and building the basic HTML file structure
@@ -58,8 +53,8 @@ Flexbox hero section and CSS Grid Layouts for the tour, about and gallery cards
  ## Part 2 updates
  - Added 3 files I had not added in part 1 which are css,images and js
  - Downloaded the images I was going to use a visual representation of what the company offers
- - linked my css file to external stylsheet.css and linked it to all 5 pages
- - Added bas styles, typography, and an ocean/sand color scheme
+ - linked my css file to external stylesheet.css and linked it to all 5 pages
+ - Added base styles, typography, and an ocean/sand color scheme
  - Styled the navigation bar with flebox,hover,focus,active states
  - Added media queries for tablets and mobile phones
  - used rem units and percentage widths for responsive sizing
@@ -68,11 +63,11 @@ Flexbox hero section and CSS Grid Layouts for the tour, about and gallery cards
  - tested my website on a desktop and on a tablet and mobile phone
 
  ## Part 2 Feedback: What I Changed
- - No flexbox or grid used for content (Hero uses Flexbox; tour, about and gallery cards use CSS grid)
+ - No Flexbox or grid used for content (Hero uses Flexbox; tour, about and gallery cards use CSS grid)
  - Responsive design only changed the nav and h1 (Tablet and mobile breakpoints now also resize h2,h3,body text, grids and images)
  - Box shadow typo ...space after rgba (Fixed the syntax and stored the shadow in a --shadow variable)
  - No :root variables (Added --navy, --gold, --sand, --cream, --white and --shadow)
- - No srcset on images (Added srcset to all images, with 480px versions made in Squoosh)
+ - No srcset on images (Added srcset to all images, with 480px versions made in Squoosh)(Google Chrome Labs n.d.)
  - Imagess folder not included (Images folder is now committed to Github)
  - No screenshots (Added desktop, tablet and mobile screenshots.. see screenshots section)
 
@@ -80,11 +75,11 @@ Flexbox hero section and CSS Grid Layouts for the tour, about and gallery cards
 
 ### Interactive elements
 - **FAQ accordion** on the About page that opens and closes answers
-- **Gallery lightbox** on the Tours page, using the dialog element with previous, next and close buttons
+- **Gallery lightbox** on the Tours page, using the dialog element with previous, next and close buttons (Mozilla n.d.)
 - **Hover effects and animations**: a fade-in on the page heading, card lift on hover, and scroll-reveal using IntersectionObserver
 
 ### Map
-The Contact page has an interactive Leaflet map with two Cape Town locations (City Centre and V&A Waterfront). The buttons below the map fly to a location and open its popup.
+The Contact page has an interactive Leaflet map with two Cape Town locations (City Centre and V&A Waterfront). The buttons below the map fly to a location and open its popup. (Agafonkin 2023; OpenStreetMap contributors n.d.)
 
 ### Dynamic content
 The tour cards on the Tours page are built with JavaScript from an array of tour objects. Visitors can search by name and sort the tours. Robben Island is marked as closed on Mondays.
@@ -92,18 +87,21 @@ The tour cards on the Tours page are built with JavaScript from an array of tour
 ### Enquiry form
 The form validates full name, email and phone number, and shows error messages. On submit it builds an itemised price quote, applies a 10% discount for 6 or more travellers, and checks whether the chosen date falls on a Monday when Robben Island is closed.
 
+### Contact form
+The form validates name, email and message, and the phone number is optional. On submit it opens a pre-filled email to Cape Ventures using a mailito link.
+
 ### SEO
 - Unique title, description, keywords and author meta tags on every page
 - Descriptive image file names and alt text
 - Internal links in the footer and on the home page
 - robots.txt and sitemap.xml
-Local business structured data (JSON-LD) on the home page
+- Local business structured data (JSON-LD) on the home page
 
 ### Off-page SEO plan
 - Create a Google Business Profile for Cape Ventures
 - Get listed on Tripadvisor and local Cape Town tourism directories
 - Share tour photos on social media with links back to the site
-- Ask past customers for review
+- Ask past customers for reviewS
 
 ### Page speed and security
 - Page speed: images are compressed, smaller 480px versions load on small screens through srcset, and images below the top of the page use lazy loading.
@@ -122,16 +120,16 @@ Local business structured data (JSON-LD) on the home page
 
 
  ## Changelog
- - [10/08/2026]  - HTML structure for all 5 pages
- - [10/08/2026]  - Fixed viewport meta typo across multiple pages
+ - [13/08/2026]  - HTML structure for all 5 pages
+ - [13/08/2026]  - Fixed viewport meta typo across multiple pages
  - [12/09/2026]  - Added CSS Stylesheet, base styles, colour scheme
  - [12/09/2026]  - Styled navigation menu with FleXbox and pseudo-classes
  - [15/09/2026]  - Added responsive breakpoints for different devices
  - [17/09/2026]  - Added images on the tour page, home page and a logo 
  - [17/09/2026]  - Made all images responsive 
- - [26/10/2026]  - Part 2 feedback: fixed the box-shadow typo and added :root variables
- - [26/10/2026]  - Part 2 feedback: Added FlexBox hero and Grid car layouts
- - [26/10/2026]  - Part 2 feedback: Extended media text, grids and images adapt
+ - [26/10/2026]  - Part 2 feedback: fixed the box-shadow type and added :root variables
+ - [26/10/2026]  - Part 2 feedback: Added Flexbox hero and Grid card layouts
+ - [26/10/2026]  - Part 2 feedback: Extended media queries so text, grids and images adapt
  - [26/10/2026]  - Part 2 feedback: Added srcset and 480px image copies
  - [26/10/2026]  - Part 3: Added FAQ accordion on the About page
  - [26/10/2026]  - Part 3: Added gallery with lightbox on the tours page
@@ -145,7 +143,7 @@ Local business structured data (JSON-LD) on the home page
  - [28/10/2026]  - Part 3: Added internal links, local SEO data, referrer policy and lazy loading
  - [29/10/2026]  - Part 3: Fixed typos in forms, meta tags and CSS
  - [29/10/2026]  - Part 3: Deployed the website  
- - [29/10/2026]  - Part 2 feedback: Added s screenshot folder with more accurately measured views
+ - [29/10/2026]  - Part 2 feedback: Added screenshot folder with desktop, tablet and mobile views
               
 
  ## References
@@ -165,6 +163,8 @@ Local business structured data (JSON-LD) on the home page
   OpenStreetMap contributors. n.d OpenStreetMap copyright and license.[Online]. Available at: https://www.openStreetmap.org/copyright [Accessed 29 October 2026]
 
   Agafonkin, V. 2023. Leaflet: an open-source JavaScript library for interactive maps. [Online]. Available at: https://leafletjs.com [Accessed 23  October 2026].
+
+  Mozilla (n.d.) *The HTML Dialog element* [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog (Accssed: 29 October2026)
 
 
  
