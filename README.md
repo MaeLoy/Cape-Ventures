@@ -144,7 +144,9 @@ Local business structured data (JSON-LD) on the home page
  - [28/10/2026]  - Part 3: Renamed images with descriptive file names for SEO
  - [28/10/2026]  - Part 3: Added internal links, local SEO data, referrer policy and lazy loading
  - [29/10/2026]  - Part 3: Fixed typos in forms, meta tags and CSS
- - [29/10/2026]  - Part 3: Deployed the website               
+ - [29/10/2026]  - Part 3: Deployed the website  
+ - [29/10/2026]  - Part 2 feedback: Added s screenshot folder with more accurately measured views
+              
 
  ## References
 
