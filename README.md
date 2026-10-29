@@ -6,10 +6,10 @@
 - Module: WEDE5020 (Web Development)
 
 ## Project Overview
-Cape Ventures is a fictional tourism company that l created based in Cape Town, South Africa, established in 2022. This website was built as part of my Web Development Portfolio of Evidence to showcase the tour packages that the company offers and how they help tourists see more of Cape Town's top attractions.
+Cape Ventures is a fictional tourism company that I created based in Cape Town, South Africa, established in 2022. This website was built as part of my Web Development Portfolio of Evidence to showcase the tour packages that the company offers and how they help tourists see more of Cape Town's top attractions.
 
 ## Website goals and Objectives
-- Give visitors clear infromation about Cape Ventures and what they offer.
+- Give visitors clear information about Cape Ventures and what they offer.
 - Allow potential customers to enquire about tours and book tours through a contact form.
 - Give customers a visually appealing website to use.
 - Ensure the website works well on both laptops, tablets and mobile phones
@@ -30,7 +30,7 @@ Cape Ventures is a fictional tourism company that l created based in Cape Town, 
  Home Page (index.html)
 
  |
- About Us(about.html)| Tour Packages(tours.html)| Bookings(boookings.html)| Contact(contact.html)
+ About Us(about.html)| Tour Packages(tours.html)| Bookings(bookings.html)| Contact(contact.html)
 
  Table Mountain Venture| Cape Point Venture| Robben Island Venture| Penguin Venture
 
@@ -59,7 +59,7 @@ Cape Ventures is a fictional tourism company that l created based in Cape Town, 
  - [10/08/2026]  - HTML structure for all 5 pages
  - [10/08/2026]  - Fixed viewport meta typo across multiple pages
  -  [12/09/2026]  - Added CSS Stylesheet, base styles, colour scheme
- - [12//09/2026]  - Styled navigation menu with Flebox and pseudo-classes
+ - [12/09/2026]  - Styled navigation menu with FleXbox and pseudo-classes
  - [15/09/2026]  - Added responsive breakpoints for different devices
  - [17/09/2026]  - Added images on the tour page, home page and a logo 
  - [17/09/2026]  - Made all images responsive 

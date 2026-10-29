@@ -213,7 +213,7 @@ float: right;
    display: block;
    overflow: hidden;
    border-radius: 8px;
-   box-shadow: var(--shadow)
+   box-shadow: var(--shadow);
 }
 
 .gallery img {
@@ -275,14 +275,14 @@ dialog img {
 .lb-buttons button:hover,
 .lb-buttons button:focus {
    background-color: var(--gold);
-   color: var(--navy)
+   color: var(--navy);
 }
 
 /* Part 3 Map */
 #map {
    height: 320px;
    border-radius: 8px;
-   box-shadow: var(--shadow)
+   box-shadow: var(--shadow);
 }
 
 .btn-row {

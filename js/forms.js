@@ -34,7 +34,7 @@ function liveCheck(form, rules) {
 /* Rules used by both forms: each returns true, or an error message */
 var RULES = {
     fullname: function (v) {
-        return /^[\p{L}][\p{L}\s'.-]+$/u.test(v.trim()) || 'Please enter your full name (letters only, at least 2 character).';
+        return /^[\p{L}][\p{L}\s'.-]+$/u.test(v.trim()) || 'Please enter your full name (letters only, at least 2 characters).';
     },
     email: function (v) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) || 'Please enter a valid email address,for example name@example.com.';
@@ -185,9 +185,9 @@ if (contactForm) {
             'Type: ' + f.type.value + '\n\n' +
             'Message:\n' + f.message.value.trim();
             
-            /* A mailito link opens the visitor's email app with everything filled in */
+            /* A mailto link opens the visitor's email app with everything filled in */
 
-            var url = 'mailito:' + EMAIL_TO + '?subject=' +
+            var url = 'mailto:' + EMAIL_TO + '?subject=' +
             encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 
             var box = document.getElementById('contact-response');
